@@ -1,0 +1,5 @@
+id,descripcion,completada,prioridad,fecha_vencimiento
+1,Comer,False,Media,2024-06-09 12:01:01
+2,Comer,False,Media,2024-06-09 12:01:01
+3,Comer,False,Media,2024-06-09 12:01:01
+4,Pescar,True,Alta,2024-06-09 13:01:01
