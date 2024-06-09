@@ -13,10 +13,11 @@ class Tarea(Base):
     prioridad = Column(String, default="Baja")
     fecha_creacion = Column(DateTime, default=datetime.utcnow)
     fecha_vencimiento = Column(DateTime, nullable=False)
+    fecha_finalizacion = Column(DateTime)
 
     def __repr__(self):
-        return f"<Tarea(id={self.id}, descripcion='{self.descripcion}', completada={self.completada}, prioridad={self.prioridad}, fecha_vencimiento={self.fecha_vencimiento})>"
-
+        return f"<Tarea(id={self.id}, descripcion='{self.descripcion}', completada={self.completada}, prioridad={self.prioridad}, fecha_vencimiento={self.fecha_vencimiento}, fecha_finalizacion={self.fecha_finalizacion})>"
+        
 DATABASE_URL = "sqlite:///tareas.db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
